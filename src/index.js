@@ -20,6 +20,7 @@ const books = [
 const BookList = () => {
     return (
         <section className={"bookList"}>
+            <EventExamples/>
             {
                 books.map(book => {
                     return < Book
@@ -30,6 +31,28 @@ const BookList = () => {
             }
         </section>
     )
+}
+
+const EventExamples = () => {
+    const handleFormInput = () => {
+        console.log("Handle form input")
+    }
+    const handleButtonClick = () => {
+        console.log("Handle ButtonClick")
+    }
+
+    const handleFormSubmission = (e) => {
+        e.preventDefault()
+        console.log("Handle Submission")
+    }
+    return <section>
+        <form onSubmit={handleFormSubmission}>
+            <h2>Typical Form</h2>
+            <input type={"text"} name={"example"} onChange={handleFormInput} style={{margin: "1 rem 0"}}/>
+
+        </form>
+        <button type={"submit"} onClick={handleButtonClick}>Submit</button>
+        </section>
 }
 
 const Book = (props) => {

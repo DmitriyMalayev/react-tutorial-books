@@ -5,8 +5,9 @@
 }
 
 body {
-    background: aliceblue;
+    background: rgb(0, 52, 102);
     color: burlywood;
+    font-size: 20px;
 }
 
 .bookList {
@@ -23,7 +24,7 @@ body {
 
 }
 .book {
-    background: white;
+    background: #000329;
     border-radius: 1rem;
     padding: 2rem;
     text-align: center;
@@ -31,10 +32,10 @@ body {
 
 .book img {
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .book h2 {
     margin-top: 1rem;
-    font-size: 1rem;
+    font-size: 20px;
 }
